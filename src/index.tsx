@@ -1,8 +1,9 @@
 import {render} from "react-dom";
 import React from "react";
-import App from "./App";
+import App from "./app/App";
 import {BrowserRouter} from "react-router-dom";
-import ThemProvider from "./theme/ThemProvider";
+import ThemProvider from "app/providers/ThemProvider/ui/ThemProvider";
+
 
 render(
     <BrowserRouter>
