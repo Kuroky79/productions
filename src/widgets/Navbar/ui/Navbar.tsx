@@ -12,7 +12,6 @@ export const Navbar = ({className}: NavbarProps) => {
     return (
 
         <div className={classNames(cls.Navbar,{},[className])}>
-            <ThemSwither/>
             <div className={cls.links}>
                 <AppLink them={AppLinkThem.SECONDARY} to={'/'} className={cls.mainLink}>Главная страница</AppLink>
                 <AppLink them={AppLinkThem.SECONDARY} to={'/about'}>О сайте</AppLink>
