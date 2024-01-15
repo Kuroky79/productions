@@ -1,7 +1,6 @@
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './Button.module.scss'
-import {ButtonHTMLAttributes, FC} from "react";
-import React from "react";
+import React, {ButtonHTMLAttributes, FC} from "react";
 export enum ThemButton{
     CLEAR = 'clear'
 }

@@ -3,8 +3,7 @@ import cls from './LangSwither.module.scss'
 import {useTranslation} from "react-i18next";
 import React from "react";
 import {AppLinkThem} from "shared/ui/AppLink/AppLink";
-import {ThemButton} from "shared/ui/Button/Button";
-import Button from 'shared/ui/Button/Button'
+import Button, {ThemButton} from "shared/ui/Button/Button";
 interface LangSwitherProps {
     className?: string;
 }

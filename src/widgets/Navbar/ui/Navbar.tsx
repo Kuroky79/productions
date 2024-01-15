@@ -2,7 +2,7 @@ import React from 'react';
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './Navbar.module.scss'
 import AppLink, {AppLinkThem} from "shared/ui/AppLink/AppLink";
-import ThemSwither from "widgets/ThemSwither/ui/ThemSwither";
+
 
 interface NavbarProps {
     className?: string;

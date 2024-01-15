@@ -1,7 +1,6 @@
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './Sidebar.module.scss'
-import {useState} from "react";
-import React from "react";
+import React, {useState} from "react";
 import ThemSwither from "widgets/ThemSwither/ui/ThemSwither";
 import LangSwither from "widgets/LangSwither/ui/LangSwither";
 interface SidebarProps {
