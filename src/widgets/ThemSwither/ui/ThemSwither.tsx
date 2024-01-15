@@ -16,7 +16,7 @@ export const ThemSwither = ({className}: ThemSwitherProps) => {
         <Button
             them={ThemButton.CLEAR}
             onClick={toggleThem}
-            className={classNames(cls.ThemSwither, {}, [className])}
+            className={classNames('', {}, [className])}
         >
             {them === Them.DARK ? <Dark/> : <Sun/>}
         </Button>
