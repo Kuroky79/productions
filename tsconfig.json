@@ -11,11 +11,11 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "types": ["webpack"],
     "baseUrl": ".",
     "paths": {
       "*": ["./src/*"]
-    }
+    },
+
   },
   "ts-node": {
     "compilerOptions": {

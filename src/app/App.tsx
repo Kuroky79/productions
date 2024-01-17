@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect} from 'react';
 import './styles/index.scss'
 import {classNames} from "shared/lib/classNames/classNames";
 import {useThem} from "./providers/ThemProvider";
@@ -12,7 +12,7 @@ import {useTranslation} from "react-i18next";
 
 
 const App = () => {
-    const {them} = useThem()
+    const {them} = useThem();
     return (
         <div className={classNames('app', {}, [them])}>
             <Suspense fallback="">
