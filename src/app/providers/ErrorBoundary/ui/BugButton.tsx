@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Button from "shared/ui/Button/Button";
+import {useTranslation} from "react-i18next";
 
-interface BugButtonProps {
-    className?: string;
-}
 
-export const BugButton: React.FC<BugButtonProps> = ({ }) => {
+export const BugButton = () => {
     const [error, setError] = useState(false);
+    const {t} = useTranslation();
     const onThrow = () => setError(true);
 
     useEffect(() => {
@@ -17,7 +16,7 @@ export const BugButton: React.FC<BugButtonProps> = ({ }) => {
 
     return (
         <Button onClick={onThrow}>
-            throw error
+            {t('throw error' as any)}
         </Button>
     );
 };
