@@ -5,3 +5,4 @@ import 'app/styles/index.scss'
 export const StyleDecorator = (storyFn: StoryFn<React.ReactNode>, context: StoryContext) => {
     return <div>{storyFn()}</div>;
 };
+//dgf
