@@ -1,6 +1,8 @@
-import type { Meta, Story } from '@storybook/react';
-import { Button, ThemButton } from './Button';
-import React from "react";
+import type {Meta, Story} from '@storybook/react';
+import {Button, ThemButton} from './Button';
+import React, {ReactNode} from "react";
+import {ThemDecorator} from "shared/config/storybook/ThemDecorator/ThemDecorator";
+import {Them} from "app/providers/ThemProvider";
 
 
 const meta: Meta = {
@@ -18,7 +20,7 @@ const meta: Meta = {
 export default meta;
 
 // Define stories
-export const Primary: Story = (args) => <Button {...args}>Text</Button>;
+export const Primary: Story = (args: ReactNode | undefined) => <Button {...args}>Text</Button>;
 Primary.args = {
     children: 'Text',
 };
@@ -41,3 +43,13 @@ Outline.args = {
     children: 'Text',
     them: ThemButton.OUTLINE,
 };
+export const OutlineDark: Story = (args) => (
+    <Button them={ThemButton.OUTLINE} {...args}>
+        Text
+    </Button>
+);
+OutlineDark.args = {
+    children: 'Text',
+    them: ThemButton.OUTLINE,
+};
+OutlineDark.decorators = [(ThemDecorator(Them.DARK))];
