@@ -9,6 +9,7 @@ interface UseThemResult {
 
 export function useThem(): UseThemResult {
     const {them,setThem} = useContext(ThemContext)
+
     const toggleThem = () =>{
         const newThem =  them === Them.LIGHT ? Them.DARK : Them.LIGHT
         setThem(newThem)

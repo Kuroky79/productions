@@ -4,6 +4,8 @@ import type {Preview} from "@storybook/react";
 
 import {Them} from "../../src/app/providers/ThemProvider";
 import {ThemDecorator} from "../../src/shared/config/storybook/ThemDecorator/ThemDecorator";
+import SidebarDecorator from "../../src/shared/config/storybook/SidebarDecorator/Sidebardecorator";
+import {RouterDecorator} from "../../src/shared/config/storybook/RouterDecorator/RouterDecorator";
 
 // // Add your decorator to the global decorators array
 // addDecorator(StyleDecorator);
@@ -19,8 +21,10 @@ const preview: Preview = {
     },
   },
   decorators: [
-    StyleDecorator,
-    ThemDecorator(Them.LIGHT),
+      StyleDecorator,
+      ThemDecorator(Them.LIGHT),
+      SidebarDecorator,
+      RouterDecorator,
   ],
 };
 
