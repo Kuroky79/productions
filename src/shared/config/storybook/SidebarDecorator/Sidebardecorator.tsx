@@ -3,7 +3,7 @@ import React from 'react';
 import ThemProvider from "app/providers/ThemProvider/ui/ThemProvider";
 
 
-export const SidebarDecorator = (Story) => (
+export const SidebarDecorator = (Story: any) => (
     <ThemProvider>
         <Story />
     </ThemProvider>
