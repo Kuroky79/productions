@@ -32,24 +32,24 @@ export const Sidebar = ({className}: SidebarProps) => {
                 size={ButtonSize.XL}
             >{collapsed ? '>' : '<'}</Button>
             <div className={cls.items}>
-                <div className={cls.item}>
-                    <HomeIcon className={cls.icon}/>
+                <div>
                     <AppLink
                         them={AppLinkThem.SECONDARY}
                         to={RouterPath.main}
-                        className={cls.link}
+                        className={cls.item}
                     >
-                        {t('Главная страница' as any)}
+                        <HomeIcon className={cls.icon}/>
+                        <span className={cls.link}>{t('Главная страница' as any)}</span>
                     </AppLink>
                 </div>
-                <div className={cls.item}>
-                    <AboutIcon className={cls.icon}/>
+                <div>
                     <AppLink
                         them={AppLinkThem.SECONDARY}
                         to={RouterPath.about}
-                        className={cls.link}
+                        className={cls.item}
                     >
-                        {t('О сайте' as any)}
+                        <AboutIcon className={cls.icon}/>
+                        <span className={cls.link}>{t('О сайте' as any)}</span>
                     </AppLink>
                 </div>
             </div>
