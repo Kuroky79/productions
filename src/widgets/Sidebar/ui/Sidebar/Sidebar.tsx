@@ -4,14 +4,18 @@ import React, {useState} from "react";
 import ThemSwither from "widgets/ThemSwither/ui/ThemSwither";
 import LangSwither from "widgets/LangSwither/ui/LangSwither";
 import Button, {ButtonSize, ButtonThem} from "shared/ui/Button/Button";
-
+import AppLink, {AppLinkThem} from "shared/ui/AppLink/AppLink";
+import {useTranslation} from "react-i18next";
+import {RouterPath} from "shared/config/routerConfig/routerConfig";
+import HomeIcon from 'shared/assets/home.svg';
+import AboutIcon from 'shared/assets/list.svg';
 interface SidebarProps {
     className?: string;
 }
 
 export const Sidebar = ({className}: SidebarProps) => {
     const [collapsed,setCollapsed] = useState(false);
-
+    const {t} = useTranslation()
     const onToggle =  () => {
         setCollapsed(prev => !prev)
     }
@@ -27,9 +31,31 @@ export const Sidebar = ({className}: SidebarProps) => {
                 square
                 size={ButtonSize.XL}
             >{collapsed ? '>' : '<'}</Button>
+            <div className={cls.items}>
+                <div className={cls.item}>
+                    <HomeIcon className={cls.icon}/>
+                    <AppLink
+                        them={AppLinkThem.SECONDARY}
+                        to={RouterPath.main}
+                        className={cls.link}
+                    >
+                        {t('Главная страница' as any)}
+                    </AppLink>
+                </div>
+                <div className={cls.item}>
+                    <AboutIcon className={cls.icon}/>
+                    <AppLink
+                        them={AppLinkThem.SECONDARY}
+                        to={RouterPath.about}
+                        className={cls.link}
+                    >
+                        {t('О сайте' as any)}
+                    </AppLink>
+                </div>
+            </div>
             <div className={cls.swithers}>
                 <ThemSwither/>
-                <LangSwither className={cls.lang}/>
+                <LangSwither short={collapsed} className={cls.lang}/>
             </div>
         </div>
     );

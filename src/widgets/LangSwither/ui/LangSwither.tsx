@@ -4,9 +4,10 @@ import React from "react";
 import Button, {ButtonThem} from "shared/ui/Button/Button";
 interface LangSwitherProps {
     className?: string;
+    short?: boolean;
 }
 
-export const LangSwither = ({className}: LangSwitherProps) => {
+export const LangSwither = ({className,short}: LangSwitherProps) => {
     const { t, i18n } = useTranslation();
 
     const toggle = () => {
@@ -14,7 +15,7 @@ export const LangSwither = ({className}: LangSwitherProps) => {
     }
     return (
         <div className={classNames('',{},[className])}>
-            <Button them={ButtonThem.CLEAR} onClick={toggle}>{t('Язык')}</Button>
+            <Button them={ButtonThem.CLEAR} onClick={toggle}>{t(short ? 'Короткий язык' : 'Язык') as any}</Button>
         </div>
     );
 };
