@@ -1,6 +1,6 @@
 // Import necessary types and components
 import type { Meta, Story } from '@storybook/react';
-import { Button, ThemButton } from './Button';
+import { Button, ButtonThem } from './Button';
 import React, { ReactNode } from 'react';
 import { ThemDecorator } from 'shared/config/storybook/ThemDecorator/ThemDecorator';
 import { Them } from 'app/providers/ThemProvider';
@@ -29,33 +29,33 @@ Primary.args = {
     children: 'Text',
 };
 
-export const Clear: Story = (args: { children: ReactNode; them: ThemButton }) => (
-    <Button them={ThemButton.CLEAR} {...args}>
+export const Clear: Story = (args: { children: ReactNode; them: ButtonThem }) => (
+    <Button them={ButtonThem.CLEAR} {...args}>
         Text
     </Button>
 );
 Clear.args = {
     children: 'Text',
-    them: ThemButton.CLEAR,
+    them: ButtonThem.CLEAR,
 };
 
-export const Outline: Story = (args: { children: ReactNode; them: ThemButton }) => (
-    <Button them={ThemButton.OUTLINE} {...args}>
+export const Outline: Story = (args: { children: ReactNode; them: ButtonThem }) => (
+    <Button them={ButtonThem.OUTLINE} {...args}>
         Text
     </Button>
 );
 Outline.args = {
     children: 'Text',
-    them: ThemButton.OUTLINE,
+    them: ButtonThem.OUTLINE,
 };
 
-export const OutlineDark: Story = (args: { children: ReactNode; them: ThemButton }) => (
-    <Button them={ThemButton.OUTLINE} {...args}>
+export const OutlineDark: Story = (args: { children: ReactNode; them: ButtonThem }) => (
+    <Button them={ButtonThem.OUTLINE} {...args}>
         Text
     </Button>
 );
 OutlineDark.args = {
     children: 'Text',
-    them: ThemButton.OUTLINE,
+    them: ButtonThem.OUTLINE,
 };
 OutlineDark.decorators = [ThemDecorator(Them.DARK)];

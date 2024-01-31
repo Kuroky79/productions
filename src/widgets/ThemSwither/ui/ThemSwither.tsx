@@ -4,7 +4,7 @@ import {Them, useThem} from "app/providers/ThemProvider";
 import React from "react";
 import Dark from 'shared/assets/Dark.svg'
 import Sun from 'shared/assets/Sun.svg'
-import Button, {ThemButton} from "shared/ui/Button/Button";
+import Button, {ButtonThem} from "shared/ui/Button/Button";
 
 interface ThemSwitherProps {
     className?: string;
@@ -14,7 +14,7 @@ export const ThemSwither = ({className}: ThemSwitherProps) => {
     const {them,toggleThem} = useThem()
     return (
         <Button
-            them={ThemButton.CLEAR}
+            them={ButtonThem.CLEAR}
             onClick={toggleThem}
             className={classNames('', {}, [className])}
         >

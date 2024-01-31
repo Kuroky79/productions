@@ -3,7 +3,7 @@ import cls from './Sidebar.module.scss'
 import React, {useState} from "react";
 import ThemSwither from "widgets/ThemSwither/ui/ThemSwither";
 import LangSwither from "widgets/LangSwither/ui/LangSwither";
-import Button, {ThemButton} from "shared/ui/Button/Button";
+import Button, {ButtonSize, ButtonThem} from "shared/ui/Button/Button";
 
 interface SidebarProps {
     className?: string;
@@ -23,8 +23,9 @@ export const Sidebar = ({className}: SidebarProps) => {
                 data-testid="sidebar-toggle"
                 className={cls.collapseBtn}
                 onClick={onToggle}
-                them={ThemButton.BACKGROUND_INVERTED}
+                them={ButtonThem.BACKGROUND_INVERTED}
                 square
+                size={ButtonSize.XL}
             >{collapsed ? '>' : '<'}</Button>
             <div className={cls.swithers}>
                 <ThemSwither/>
