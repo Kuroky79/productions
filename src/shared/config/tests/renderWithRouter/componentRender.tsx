@@ -6,15 +6,15 @@ import React from "react";
 import {MemoryRouter} from "react-router-dom";
 
 
-export interface renderWithRouterOptions {
+export interface ComponentRenderOptions {
     route?: string;
 }
-export function renderWithRouter(component: ReactNode, options: renderWithRouterOptions = {}){
-    const {route} = options;
+export function componentRender(component: ReactNode, options: ComponentRenderOptions = {}){
+    const {route = '/'} = options;
 
 
     return render(
-        <MemoryRouter initialEntries={[]}>
+        <MemoryRouter initialEntries={[route]}>
             <I18nextProvider i18n={i18nForTests}>
                 {component}
             </I18nextProvider>

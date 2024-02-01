@@ -4,10 +4,11 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
 import ThemProvider from "app/providers/ThemProvider/ui/ThemProvider";
 import {renderWithTranslation} from "shared/lib/tests/renderWithTranslation";
+import {componentRender} from "shared/config/tests/renderWithRouter/componentRender";
 
 describe('Sidebar', () => {
     test('Test Sidebar', () => {
-        render(
+        componentRender(
             <ThemProvider>
                 <Sidebar />
             </ThemProvider>
@@ -16,7 +17,7 @@ describe('Sidebar', () => {
     });
 
     test('Test Sidebar two variant + translation', () => {
-        renderWithTranslation(
+        componentRender(
             <ThemProvider>
                 <Sidebar />
             </ThemProvider>
@@ -25,7 +26,7 @@ describe('Sidebar', () => {
     });
 
     test('Test toggle', () => {
-        renderWithTranslation(
+        componentRender(
             <ThemProvider>
                 <Sidebar />
             </ThemProvider>
