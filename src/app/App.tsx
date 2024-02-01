@@ -21,7 +21,9 @@ const App = () => {
             <Suspense fallback="">
                 <Navbar/>
                 <button onClick={()=> setIsOpen(true)}>Toggle</button>
-                <Modal isOpen={isOpen} onClose={()=>setIsOpen(false)}/>
+                <Modal isOpen={isOpen} onClose={()=>setIsOpen(false)}>
+                    DGFHDGHHHHHHHHHHHHHHHHHHHHHHDGHDGH
+                </Modal>
                 <div className="content-page">
                     <Sidebar/>
                     <AppRouter/>
