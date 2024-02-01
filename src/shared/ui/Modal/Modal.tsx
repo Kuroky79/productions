@@ -9,14 +9,21 @@ interface ModalProps {
     onClose?: () => void;
 }
 
+
+
+
 export const Modal = ({ className, children,isOpen,onClose }: ModalProps) => {
     const mods: Record<string,boolean> = {
         [cls.opened]: isOpen,
     }
-
+    const closeHandler = () =>{
+        if(onClose){
+            onClose()
+        }
+    }
     return (
         <div className={classNames(cls.Modal, mods, [className])}>
-            <div className={cls.overlay}>
+            <div className={cls.overlay} onClick={closeHandler}>
                 <div className={cls.content}>
                     {children}
                 </div>
