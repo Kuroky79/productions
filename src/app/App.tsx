@@ -14,16 +14,10 @@ import Button from "shared/ui/Button/Button";
 
 const App = () => {
     const {them} = useThem();
-
-    const [isOpen, setIsOpen] = useState(false)
     return (
         <div className={classNames('app', {}, [them])}>
             <Suspense fallback="">
                 <Navbar/>
-                <button onClick={()=> setIsOpen(true)}>Toggle</button>
-                <Modal isOpen={isOpen} onClose={()=>setIsOpen(false)}>
-                    DGFHDGHHHHHHHHHHHHHHHHHHHHHHDGHDGH
-                </Modal>
                 <div className="content-page">
                     <Sidebar/>
                     <AppRouter/>

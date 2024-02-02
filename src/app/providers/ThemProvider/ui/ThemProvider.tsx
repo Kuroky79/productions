@@ -4,9 +4,14 @@ import {LOCAL_STORAGE_THEME_KEY, Them, ThemContext} from "../lib/ThemContext";
 
 
 const defaultThem = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Them || Them.LIGHT;
-const ThemProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [them, setThem] = useState<Them>(defaultThem)
 
+interface ThemProviderProps {
+    initialThem?: Them;
+}
+
+const ThemProvider: FC<ThemProviderProps> = (props) => {
+    const {initialThem,children} = props;
+    const [them, setThem] = useState<Them>(initialThem || defaultThem)
     const defaultProps = useMemo(() => ({
         them: them,
         setThem: setThem,

@@ -37,6 +37,14 @@ Clear.args = {
     them: ButtonThem.CLEAR,
 };
 
+export const ClearInverted: Story = (args: { children: ReactNode; them: ButtonThem }) => (
+    <Button them={ButtonThem.CLEAR} {...args}></Button>
+);
+ClearInverted.args = {
+    children: 'Text',
+    them: ButtonThem.CLEAR_INVERTED,
+};
+
 export const Outline: Story = (args: { children: ReactNode; them: ButtonThem }) => (
     <Button them={ButtonThem.OUTLINE} {...args}></Button>
 );
