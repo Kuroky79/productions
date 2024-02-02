@@ -28,7 +28,8 @@ module.exports = {
     "plugins": [
         "react",
         "react-hooks",
-        "@typescript-eslint" // Add TypeScript plugin
+        "@typescript-eslint",
+        "i18next"
     ],
     "settings": {
         "react": {
@@ -42,8 +43,6 @@ module.exports = {
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": 0,
         "@typescript-eslint/no-this-alias": "off",
-        "react-hooks/exhaustive-deps": "off",
-        "react-hooks/rules-of-hooks": "off",
         "react-internal/no-production-logging": "off",
         "react-internal/prod-error-codes": "off",
         "jsx-a11y/anchor-has-content": "off",
@@ -51,7 +50,9 @@ module.exports = {
         'no-shadow': "off",
         "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error"
     },
     globals: {
         __IS_DEV__: true,
