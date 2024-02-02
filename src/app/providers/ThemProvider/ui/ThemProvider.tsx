@@ -7,10 +7,12 @@ const defaultThem = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Them || The
 
 interface ThemProviderProps {
     initialThem?: Them;
+    children: React.ReactNode
 }
 
 const ThemProvider: FC<ThemProviderProps> = (props) => {
-    const {initialThem,children} = props;
+    const {initialThem
+        ,children} = props;
     const [them, setThem] = useState<Them>(initialThem || defaultThem)
     const defaultProps = useMemo(() => ({
         them: them,
