@@ -1,5 +1,5 @@
 import React, {Suspense, useEffect, useState} from 'react';
-import './styles/index.scss'
+
 import {classNames} from "shared/lib/classNames/classNames";
 import {useThem} from "./providers/ThemProvider";
 
