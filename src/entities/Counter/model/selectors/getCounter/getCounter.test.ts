@@ -1,5 +1,4 @@
-import {getCounter} from "../getCounter/GetCounter";
-import {MaybePartiallyMockedDeep} from "@storybook/test";
+import {getCounter} from "./getCounter";
 import {StateSchema} from "app/providers/StoreProvider";
 
 describe('getCounter', () => {
