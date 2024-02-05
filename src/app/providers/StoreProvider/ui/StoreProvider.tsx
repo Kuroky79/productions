@@ -5,7 +5,7 @@ import {StateSchema} from "app/providers/StoreProvider/config/StateSchema";
 import React from "react";
 interface StoreProviderProps {
     children?: ReactNode;
-    initialState?: DeepPartial<StateSchema>;
+    initialState?: StateSchema;
 }
 
 

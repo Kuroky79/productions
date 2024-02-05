@@ -3,7 +3,7 @@ import {getCounterValue} from './getCounterValue'
 import {StateSchema} from "app/providers/StoreProvider";
 describe('GetCounterValue.test', () => {
     test('test value', () => {
-        const state: DeepPartial<StateSchema> = {
+        const state: StateSchema = {
             counter: {value: 10},
         }
 
