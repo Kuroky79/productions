@@ -15,7 +15,7 @@ import Button from "shared/ui/Button/Button";
 const App = () => {
     const {them} = useThem();
     return (
-        <div className={classNames('app', {}, [them])}>
+        <div className={classNames('app', {}, [])}>
             <Suspense fallback="">
                 <Navbar/>
                 <div className="content-page">

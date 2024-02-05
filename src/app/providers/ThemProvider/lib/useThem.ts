@@ -12,7 +12,8 @@ export function useThem(): UseThemResult {
 
     const toggleThem = () =>{
         const newThem =  them === Them.LIGHT ? Them.DARK : Them.LIGHT
-        setThem(newThem)
+        setThem(newThem);
+        document.body.className = newThem;
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newThem)
     }
 
