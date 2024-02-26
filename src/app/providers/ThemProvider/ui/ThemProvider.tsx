@@ -3,8 +3,8 @@ import {LOCAL_STORAGE_THEME_KEY, Them, ThemContext} from "../lib/ThemContext";
 
 
 
-const defaultThem = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Them || Them.LIGHT;
-
+const defaultThem = Them.DARK || localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Them;
+console.log(defaultThem)
 interface ThemProviderProps {
     initialThem?: Them;
     children: React.ReactNode
