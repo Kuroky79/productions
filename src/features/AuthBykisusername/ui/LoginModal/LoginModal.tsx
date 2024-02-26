@@ -8,7 +8,7 @@ interface LoginModalProps {
 export const LoginModal = ({className}: LoginModalProps) => {
     return (
         <Modal className={classNames(cls.LoginModal,{},[className])}>
-          
+            <LoginForm/>
         </Modal>
     );
 };
