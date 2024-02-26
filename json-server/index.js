@@ -1,5 +1,5 @@
 const fs = require('fs');
-const jsonServer = require('json-server');
+const jsonServer = require('json-server/index');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 
