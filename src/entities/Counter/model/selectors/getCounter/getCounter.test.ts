@@ -4,7 +4,7 @@ import {StateSchema} from "app/providers/StoreProvider";
 describe('getCounter', () => {
     test('should return counter value', () => {
         const state: StateSchema = {
-            counter: {value: 10},
+            counter: {value: 10},user: { /* ваш пользовательский объект */ },
         }
 
         expect(getCounter(state as StateSchema)).toEqual({value: 10});
